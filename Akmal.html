@@ -1,41 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>City Emergency Response System</title>
+    <title>Akmal – Smart Emergency Response System</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI", Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f5f5f5;
+            background: #f4f6f9;
         }
+
         .navbar {
-            background-color: #333;
+            background-color: #2c3e50;
             padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
         }
+
         .navbar a {
             color: white;
-            margin: 0 15px;
+            margin: 0 20px;
             font-size: 18px;
             text-decoration: none;
+            font-weight: 500;
         }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
         .container {
             background: white;
+            max-width: 1000px;
             margin: 40px auto;
-            max-width: 900px;
-            padding: 30px;
+            padding: 40px;
             border-radius: 10px;
-            border: 1px solid #ccc;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
         }
+
         h1, h2 {
-            text-align: center;
+            color: #2c3e50;
+            margin-top: 0;
         }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            border-left: 5px solid #2980b9;
+            padding-left: 10px;
+        }
+
+        p, li {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #333;
+        }
+
         ul {
-            font-size: 18px;
+            padding-left: 20px;
+        }
+
+        .section-box {
+            background: #fafafa;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin-top: 20px;
+            border-radius: 6px;
         }
     </style>
 </head>
+
 <body>
 
 <div class="navbar">
@@ -47,25 +86,154 @@
 </div>
 
 <div class="container">
-    <h1>City Emergency Response System</h1>
-    <h2>Team Members</h2>
 
-    <ul>
-        <li><a href="akmal.html">Akmal B</a></li>
-        <li><a href="member2.html">Member 2 Name</a></li>
-        <li><a href="member3.html">Member 3 Name</a></li>
-        <li><a href="member4.html">Member 4 Name</a></li>
-    </ul>
-
-    <h2>About the Project</h2>
-    <p>
-        This project focuses on building a Smart Emergency Response & Dynamic Routing 
-        System for our model city. The system uses data structures and algorithms to 
-        efficiently allocate ambulances, fire trucks, and police vehicles while selecting 
-        the fastest possible routes.
+    <h1>Smart Emergency Response System – Akmal</h1>
+    <p style="text-align:center; font-size:18px; color:#555;">
+        Course Project – Data Structures & Algorithms
     </p>
 
-    <p>Click on your name in the navigation bar to open your individual page.</p>
+    <!-- SECTION 1 -->
+    <h2>1. Identified Business Ideas</h2>
+    
+    <div class="section-box">
+        <h3>Smart Emergency Response Control Centre</h3>
+        <p>
+            This idea aligns with <b>SDG 3 (Good Health)</b> and 
+            <b>SDG 11 (Sustainable Cities)</b>.  
+            A centralized command centre receives all emergency calls and uses 
+            algorithms to coordinate ambulances, fire trucks and police units.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h3>Intelligent Ambulance Routing Network</h3>
+        <p>
+            Supports <b>SDG 3</b> and <b>SDG 9</b>.  
+            The system models the city as a graph and uses shortest path algorithms 
+            to guide ambulances through the fastest routes in real time.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h3>Disaster & Evacuation Planning System</h3>
+        <p>
+            Relevant to <b>SDG 11</b> and <b>SDG 13</b>.  
+            Helps simulate floods, fires or earthquakes and identifies safe zones and evacuation routes.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h3>Emergency Resource & Inventory Management</h3>
+        <p>
+            Tracks hospital beds, doctors, fire trucks, police vehicles and medical resources.  
+            Uses efficient data structures for fast lookup and updates.
+        </p>
+    </div>
+
+    <!-- COURSE REFLECTIONS -->
+    <h2>2. Course Reflections</h2>
+
+    <div class="section-box">
+        <h3>1) Problems in Nature</h3>
+        <p>
+            Nature shows patterns like iteration (day–night cycle), recursion (tree branching) 
+            and backtracking (animals exploring food paths). These mirror algorithmic thinking.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h3>2) Space & Time Efficiency</h3>
+        <p>
+            Time efficiency measures speed and space efficiency measures memory usage.  
+            Orders of growth include O(1), O(log n), O(n), O(n log n), O(n²), O(2ⁿ).
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h3>3) Design Principles</h3>
+        <p>
+            Decomposition, abstraction, pattern recognition and transform-and-conquer 
+            help break large problems into simple solvable units.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h3>4) Hierarchical Data & Trees</h3>
+        <p>
+            BST, AVL and Red-Black trees provide balanced structures.  
+            Heaps enable priority queues.  
+            Tries allow efficient prefix search.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h3>5) Array Query Algorithms</h3>
+        <p>
+            Segment trees, Fenwick trees and sparse tables handle range queries efficiently 
+            and are useful for time-series emergency data.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h3>6) Trees vs Graphs</h3>
+        <p>
+            Trees represent hierarchies (no cycles).  
+            Graphs represent real-world networks (roads, power grids).
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h3>7) Sorting & Searching</h3>
+        <p>
+            Merge sort, quick sort and heap sort provide O(n log n) efficiency.  
+            Binary search enables fast lookup on sorted data.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h3>8) Importance of Graph Algorithms</h3>
+        <p>
+            MST algorithms minimize infrastructure cost.  
+            Shortest path algorithms reduce emergency response time.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h3>9) Algorithm Design Techniques</h3>
+        <p>
+            Greedy (Dijkstra, Prim), divide-and-conquer (sorting),  
+            brute force, backtracking, dynamic programming and transform-and-conquer.
+        </p>
+    </div>
+
+    <!-- BUSINESS IDEA BREAKDOWN -->
+    <h2>3. Breakdown of the Business Idea</h2>
+
+    <div class="section-box">
+        <h3>Smart Emergency Response & Dynamic Routing</h3>
+        <p>
+            The city is modelled as a weighted graph.  
+            When an emergency occurs, the system identifies the nearest vehicle and computes the fastest route 
+            based on traffic, road blocks and time of day.
+        </p>
+
+        <p>This system uses:</p>
+        <ul>
+            <li>Arrays & Structures (to store nodes & edges)</li>
+            <li>Linked Lists (for adjacency list)</li>
+            <li>BFS/DFS (connectivity & exploration)</li>
+            <li>Dijkstra + Min-Heap (routing)</li>
+            <li>Hash Table (name → node ID mapping)</li>
+            <li>Queue (emergency request handling)</li>
+            <li>Segment Tree/Fenwick Tree (analytics)</li>
+        </ul>
+
+        <p>
+            This creates a real-world, efficient and sustainable emergency management system 
+            that reduces response time and saves lives.
+        </p>
+    </div>
+
 </div>
 
 </body>
