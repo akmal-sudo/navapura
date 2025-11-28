@@ -1,240 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Akmal – Smart Emergency Response System</title>
-    <style>
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f6f9;
-        }
+  <meta charset="UTF-8">
+  <title>Akmal B — Smart Emergency Response Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      min-height: 100vh;
+      color: #333;
+    }
 
-        .navbar {
-            background-color: #2c3e50;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      padding: 14px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-        .navbar a {
-            color: white;
-            margin: 0 20px;
-            font-size: 18px;
-            text-decoration: none;
-            font-weight: 500;
-        }
+    .navbar a {
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 17px;
+      color: white;
+      transition: 0.3s;
+    }
 
-        .navbar a:hover {
-            text-decoration: underline;
-        }
+    .navbar a:hover {
+      color: #002b5b;
+      transform: scale(1.1);
+    }
 
-        .container {
-            background: white;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
-        }
+    .container {
+      background: rgba(255,255,255,0.9);
+      max-width: 900px;
+      margin: 60px auto 40px auto;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
 
-        h1, h2 {
-            color: #2c3e50;
-            margin-top: 0;
-        }
+    h1, h2, h3 {
+      margin-top: 0;
+    }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      color: #222;
+    }
 
-        h2 {
-            margin-top: 40px;
-            border-left: 5px solid #2980b9;
-            padding-left: 10px;
-        }
+    h2 {
+      font-size: 22px;
+      color: #444;
+      margin-bottom: 10px;
+    }
 
-        p, li {
-            font-size: 17px;
-            line-height: 1.6;
-            color: #333;
-        }
+    p, li {
+      line-height: 1.6;
+      font-size: 17px;
+    }
 
-        ul {
-            padding-left: 20px;
-        }
+    ul {
+      padding-left: 20px;
+    }
 
-        .section-box {
-            background: #fafafa;
-            padding: 20px;
-            border-left: 4px solid #3498db;
-            margin-top: 20px;
-            border-radius: 6px;
-        }
-    </style>
+    .section {
+      margin: 25px 0;
+    }
+
+    .code-block {
+      background: #f4f4f4;
+      padding: 10px;
+      border-left: 4px solid #4facfe;
+      font-family: monospace;
+      white-space: pre-wrap;
+      overflow-x: auto;
+    }
+
+  </style>
 </head>
-
 <body>
 
-<div class="navbar">
+  <div class="navbar">
     <a href="index.html">Home</a>
+    <a href="about.html">About</a>
     <a href="akmal.html">Akmal</a>
-    <a href="member2.html">Member 2</a>
-    <a href="member3.html">Member 3</a>
-    <a href="member4.html">Member 4</a>
-</div>
+    <a href="annapurna.html">Annapurna</a>
+    <a href="amruta.html">Amruta</a>
+  </div>
 
-<div class="container">
+  <div class="container">
+    <h1>Akmal B — Project Report</h1>
+    <h2>Smart Emergency Response & Dynamic Routing System</h2>
 
-    <h1>Smart Emergency Response System – Akmal</h1>
-    <p style="text-align:center; font-size:18px; color:#555;">
-        Course Project – Data Structures & Algorithms
-    </p>
-
-    <!-- SECTION 1 -->
-    <h2>1. Identified Business Ideas</h2>
-    
-    <div class="section-box">
-        <h3>Smart Emergency Response Control Centre</h3>
-        <p>
-            This idea aligns with <b>SDG 3 (Good Health)</b> and 
-            <b>SDG 11 (Sustainable Cities)</b>.  
-            A centralized command centre receives all emergency calls and uses 
-            algorithms to coordinate ambulances, fire trucks and police units.
-        </p>
+    <div class="section">
+      <h3>1. Problem Statement & Vision</h3>
+      <p>
+        In modern cities, emergencies — such as accidents, medical crises, fires, or crimes — demand immediate response. Delay can cost lives. Our goal is to build a system that:
+      </p>
+      <ul>
+        <li>Models the city as a graph of junctions and roads.</li>
+        <li>Allocates the nearest available ambulance / fire-truck / police vehicle.</li>
+        <li>Computes the fastest and safest route considering current traffic and road conditions.</li>
+        <li>Minimizes total response time and improves emergency management efficiency.</li>
+      </ul>
     </div>
 
-    <div class="section-box">
-        <h3>Intelligent Ambulance Routing Network</h3>
-        <p>
-            Supports <b>SDG 3</b> and <b>SDG 9</b>.  
-            The system models the city as a graph and uses shortest path algorithms 
-            to guide ambulances through the fastest routes in real time.
-        </p>
+    <div class="section">
+      <h3>2. Algorithms & Data Structures Used</h3>
+      <ul>
+        <li>Graph representation (Adjacency List via Linked List)</li>
+        <li>Breadth-First Search (BFS) — reachability checks</li>
+        <li>Depth-First Search (DFS) — connectivity / zone verification</li>
+        <li>Shortest-Path algorithms: Dijkstra's algorithm (with Min-Heap)</li>
+        <li>Optional: Floyd–Warshall algorithm (for all-pairs shortest paths or precomputed emergency-vehicle routing tables)</li>
+        <li>Hash Table — fast mapping from junction names to node IDs</li>
+        <li>Queue — managing incoming emergency requests</li>
+        <li>Min-Heap (Priority Queue) — for efficient route computation</li>
+        <li>Arrays & Structs — storing nodes, roads, vehicles</li>
+      </ul>
     </div>
 
-    <div class="section-box">
-        <h3>Disaster & Evacuation Planning System</h3>
-        <p>
-            Relevant to <b>SDG 11</b> and <b>SDG 13</b>.  
-            Helps simulate floods, fires or earthquakes and identifies safe zones and evacuation routes.
-        </p>
+    <div class="section">
+      <h3>3. How It Works — System Flow</h3>
+      <ol>
+        <li>Emergency request arrives (type: ambulance, fire, police). Student inputs location (junction ID or area name).</li>
+        <li>System maps name → node ID via hash table.</li>
+        <li>Checks available nearest emergency vehicle (ambulance / fire-truck / police) based on vehicle database.</li>
+        <li>Runs Dijkstra on city-graph (weights based on road length + traffic multiplier) to find fastest route.</li>
+        <li>Outputs route and estimated time. Also logs the dispatch and marks vehicle as “busy”.</li>
+        <li>After completion, vehicle becomes free — system updates availability. Optionally stores response time for analytics (hot zones, frequent emergencies).</li>
+      </ol>
     </div>
 
-    <div class="section-box">
-        <h3>Emergency Resource & Inventory Management</h3>
-        <p>
-            Tracks hospital beds, doctors, fire trucks, police vehicles and medical resources.  
-            Uses efficient data structures for fast lookup and updates.
-        </p>
+    <div class="section">
+      <h3>4. Why This Topic Is Ideal</h3>
+      <p>
+        This project allows implementation of nearly all major data structures and algorithms studied in the course — graphs, heaps, hash-tables, BFS/DFS, shortest-path algorithms — making it perfect to score highest. Moreover, it models a **real-life, useful application**, which adds strong value and practical relevance.
+      </p>
     </div>
 
-    <!-- COURSE REFLECTIONS -->
-    <h2>2. Course Reflections</h2>
-
-    <div class="section-box">
-        <h3>1) Problems in Nature</h3>
-        <p>
-            Nature shows patterns like iteration (day–night cycle), recursion (tree branching) 
-            and backtracking (animals exploring food paths). These mirror algorithmic thinking.
-        </p>
+    <div class="section">
+      <h3>5. (Optional) Future Extensions / Enhancements</h3>
+      <ul>
+        <li>Dynamic traffic updates — read real-time traffic weights from sensors or user reports.</li>
+        <li>All-pairs shortest path precomputation via Floyd–Warshall — faster dispatch during emergencies.</li>
+        <li>Database for hospitals, fire-stations, police-stations, ambulances with capacities, availability, types.</li>
+        <li>Analytics dashboard — hot-zone detection, frequent incident areas, average response time.</li>
+        <li>Web/mobile interface simulation — interactive map showing city layout, vehicle movement, live dispatch.</li>
+      </ul>
     </div>
 
-    <div class="section-box">
-        <h3>2) Space & Time Efficiency</h3>
-        <p>
-            Time efficiency measures speed and space efficiency measures memory usage.  
-            Orders of growth include O(1), O(log n), O(n), O(n log n), O(n²), O(2ⁿ).
-        </p>
+    <div class="section">
+      <h3>6. Code Structure (Suggested)</h3>
+      <div class="code-block">
+/* /src  
+   ├── main.c / main.py  — handles user input, menu, calls dispatch function  
+   ├── graph.c / graph.py — builds city graph, adjacency list  
+   ├── dijkstra.c / dijkstra.py — implements Dijkstra using min-heap  
+   ├── vehicle_manager.c / vehicle_manager.py — tracks available vehicles  
+   ├── hash_table.c / hash_table.py — map names → IDs  
+   └── utils.c / utils.py — helper functions (parsing, printing routes etc.)  
+      */
+      </div>
     </div>
 
-    <div class="section-box">
-        <h3>3) Design Principles</h3>
-        <p>
-            Decomposition, abstraction, pattern recognition and transform-and-conquer 
-            help break large problems into simple solvable units.
-        </p>
+    <div class="section">
+      <h3>7. Contact / Author Info</h3>
+      <p><b>Name:</b> Akmal B</p>
+      <p><b>USN:</b> 01fe23bcs___</p>
+      <p><b>Course:</b> Design & Analysis of Algorithms (DAA)</p>
     </div>
 
-    <div class="section-box">
-        <h3>4) Hierarchical Data & Trees</h3>
-        <p>
-            BST, AVL and Red-Black trees provide balanced structures.  
-            Heaps enable priority queues.  
-            Tries allow efficient prefix search.
-        </p>
-    </div>
-
-    <div class="section-box">
-        <h3>5) Array Query Algorithms</h3>
-        <p>
-            Segment trees, Fenwick trees and sparse tables handle range queries efficiently 
-            and are useful for time-series emergency data.
-        </p>
-    </div>
-
-    <div class="section-box">
-        <h3>6) Trees vs Graphs</h3>
-        <p>
-            Trees represent hierarchies (no cycles).  
-            Graphs represent real-world networks (roads, power grids).
-        </p>
-    </div>
-
-    <div class="section-box">
-        <h3>7) Sorting & Searching</h3>
-        <p>
-            Merge sort, quick sort and heap sort provide O(n log n) efficiency.  
-            Binary search enables fast lookup on sorted data.
-        </p>
-    </div>
-
-    <div class="section-box">
-        <h3>8) Importance of Graph Algorithms</h3>
-        <p>
-            MST algorithms minimize infrastructure cost.  
-            Shortest path algorithms reduce emergency response time.
-        </p>
-    </div>
-
-    <div class="section-box">
-        <h3>9) Algorithm Design Techniques</h3>
-        <p>
-            Greedy (Dijkstra, Prim), divide-and-conquer (sorting),  
-            brute force, backtracking, dynamic programming and transform-and-conquer.
-        </p>
-    </div>
-
-    <!-- BUSINESS IDEA BREAKDOWN -->
-    <h2>3. Breakdown of the Business Idea</h2>
-
-    <div class="section-box">
-        <h3>Smart Emergency Response & Dynamic Routing</h3>
-        <p>
-            The city is modelled as a weighted graph.  
-            When an emergency occurs, the system identifies the nearest vehicle and computes the fastest route 
-            based on traffic, road blocks and time of day.
-        </p>
-
-        <p>This system uses:</p>
-        <ul>
-            <li>Arrays & Structures (to store nodes & edges)</li>
-            <li>Linked Lists (for adjacency list)</li>
-            <li>BFS/DFS (connectivity & exploration)</li>
-            <li>Dijkstra + Min-Heap (routing)</li>
-            <li>Hash Table (name → node ID mapping)</li>
-            <li>Queue (emergency request handling)</li>
-            <li>Segment Tree/Fenwick Tree (analytics)</li>
-        </ul>
-
-        <p>
-            This creates a real-world, efficient and sustainable emergency management system 
-            that reduces response time and saves lives.
-        </p>
-    </div>
-
-</div>
+  </div>
 
 </body>
 </html>
