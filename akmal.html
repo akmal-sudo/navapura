@@ -1,72 +1,288 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navapura — City Design Project</title>
+## Identified Business Ideas
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
+### Smart Emergency Response Control Centre
 
-<body>
+This idea aligns with **SDG 3 (Good Health and Well-Being)** and **SDG 11 (Sustainable Cities and Communities)**.  
+A central emergency control centre receives calls related to accidents, medical emergencies, fires, or crimes. It coordinates with ambulances, fire trucks and police patrol units, and uses algorithms to quickly decide:
+- Which vehicle should respond.
+- What is the **fastest and safest route** considering current traffic.
+- How to minimise total response time in the whole city.
 
-  <!-- HEADER -->
-  <header>
-    <h1 class="logo">🏙️ Navapura</h1>
+This improves survival chances, reduces chaos during emergencies, and makes the city more resilient.
 
-    <nav class="menu">
-      <a href="about.html">About</a>
-      <a href="annapurna.html">Annapurna</a>
-      <a href="akmal.html">Akmal</a>
-      <a href="amruta.html">Amruta</a>
-    </nav>
-  </header>
+### Intelligent Ambulance Routing Network
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h2 class="hero-title">Welcome to Navapura</h2>
-    <p class="hero-sub">A smart, sustainable, future-ready city designed for the DAA Project.</p>
+This business idea supports **SDG 3** and **SDG 9 (Industry, Innovation and Infrastructure)**.  
+Ambulances are equipped with GPS and connected to the control centre. For every new emergency:
+- The system models the city as a **graph** of junctions and roads.
+- Uses **shortest path algorithms** to compute the best route.
+- Considers traffic density, one-way roads and blocked paths.
 
-    <a href="#team" class="hero-btn">Meet the Team ↓</a>
+This reduces delay in reaching hospitals and optimizes the use of limited ambulances.
 
-    <img src="https://i.imgur.com/vfJvYEX.png" class="hero-img">
-  </section>
+### Disaster & Evacuation Planning System
 
-  <!-- TEAM SECTION -->
-  <section id="team" class="team">
-    <h2 class="section-title">The Creators</h2>
-    <p class="section-sub">We built Navapura with love, logic, and lots of coffee ☕</p>
+This idea relates to **SDG 11** and **SDG 13 (Climate Action)**.  
+In case of floods, fires or other disasters, the system:
+- Identifies safe zones and shelters in the city.
+- Calculates escape routes from high-risk zones using graph algorithms.
+- Simulates different scenarios to find **bottlenecks** in roads.
 
-    <div class="team-cards">
-      <div class="card">
-        <img src="https://api.dicebear.com/7.x/fun-emoji/svg?seed=Annapurna" class="profile">
-        <h3>Annapurna</h3>
-        <p class="role">City Planning & Concept</p>
-        <a href="annapurna.html" class="code-btn">View Work</a>
-      </div>
+This can be used by the city administration to prepare evacuation plans **before** a disaster happens.
 
-      <div class="card">
-        <img src="https://api.dicebear.com/7.x/fun-emoji/svg?seed=Akmal" class="profile">
-        <h3>Akmal</h3>
-        <p class="role">Maps & Infrastructure</p>
-        <a href="akmal.html" class="code-btn">View Work</a>
-      </div>
+### Emergency Resource & Inventory Management
 
-      <div class="card">
-        <img src="https://api.dicebear.com/7.x/fun-emoji/svg?seed=Amruta" class="profile">
-        <h3>Amruta</h3>
-        <p class="role">Design & Documentation</p>
-        <a href="amruta.html" class="code-btn">View Work</a>
-      </div>
-    </div>
-  </section>
+This idea supports **SDG 3**, **SDG 9** and **SDG 16 (Peace, Justice and Strong Institutions)**.  
+The system keeps track of:
+- Availability of hospital beds, doctors and ICU units.
+- Number of fire trucks and police vehicles currently free.
+- Inventory of medicines, blood units and oxygen cylinders.
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Navapura · DAA Project
-  </footer>
+By using efficient data structures, the system can **quickly search, update and allocate** these resources smoothly during peak emergency load.
 
-  <script src="main.js"></script>
-</body>
-</html>
+---
+
+## Course Reflections
+
+1. **What are the kinds of problems we see in nature? (iteration, recursion, backtracking)**  
+
+   Many natural processes can be seen as algorithmic. Repeated patterns like heartbeats, day–night cycles or seasonal changes resemble **iteration**. Self-similar structures like tree branches, snowflakes or blood vessels relate to **recursion**, where a big structure is built from smaller copies. Animals searching for food or bees exploring flowers often try some choices and undo them, similar to **backtracking**, until they find an optimal or safe path.
+
+2. **What is space and time efficiency? Why are they important? Explain the different classes of problems and orders of growth.**  
+
+   **Time efficiency** tells us how fast an algorithm runs as input size increases. **Space efficiency** tells us how much extra memory it needs. They matter because in real-world systems, we have limited time and memory, especially when handling city-scale data.  
+   Common orders of growth:  
+   - **O(1)** – constant, independent of input size.  
+   - **O(log n)** – logarithmic, grows slowly even for large inputs.  
+   - **O(n)** – linear, doubles with doubling input.  
+   - **O(n log n)** – typical for efficient sorting.  
+   - **O(n²)** – quadratic, often too slow for large inputs.  
+   - **O(2ⁿ)**, **O(n!)** – exponential / factorial, usually impractical except for very small inputs.
+
+3. **Take away from different design principles from chapter 2?**  
+
+   The main takeaway is that **good design reduces complexity**. Techniques such as:
+   - **Decomposition**: breaking a huge problem (like whole city) into smaller modules (zones, vehicles, routes).  
+   - **Pattern recognition and abstraction**: noticing repeated structures, like all junctions behaving like nodes in a graph.  
+   - **Transform-and-conquer**: converting messy data into a more useful structure like a heap or balanced tree.  
+   - **Precomputation and lookup tables**: trading extra space to answer queries faster.  
+   - **Pruning and lazy propagation**: avoiding unnecessary work by skipping irrelevant branches or delaying updates.  
+   These principles help us write cleaner and more efficient algorithms.
+
+4. **The hierarchical data and how different tree data structures solve and optimize over problem scenarios (tree, bst, avl, 2-3, red-black, heap, trie)**  
+
+   - A basic **tree** organizes data in parent–child form.  
+   - A **Binary Search Tree (BST)** keeps elements in sorted order for faster search.  
+   - **AVL** and **Red-Black trees** are **self-balancing BSTs** that avoid skewed shapes, ensuring operations stay around O(log n).  
+   - **2–3 trees** keep all leaves at similar depth and are useful for indexing.  
+   - A **heap** maintains a “parent dominates children” property and is ideal for priority queues.  
+   - A **trie** stores strings character by character and is very efficient for prefix-based search, like searching road or area names.  
+
+   Each variant optimizes for a specific type of query or update.
+
+5. **The need for array query algorithms and their implications. Their applications and principles need to be discussed.**  
+
+   When we repeatedly ask questions over ranges (e.g., minimum response time in a week, total emergencies in an area), simple arrays become slow if we recompute every time. **Array query algorithms** like prefix sums, **segment trees**, **Fenwick trees** and **sparse tables** pre-process information so that:
+   - Range queries become faster (often O(log n) or even O(1)).  
+   - Updates can also be handled efficiently.  
+
+   Applications include analytics dashboards, traffic monitoring systems, sensor data processing and anything that handles **large, time-series data**.
+
+6. **Differentiate between trees and graphs and their traversals. The applications of each.**  
+
+   - **Trees** are a special kind of graph with no cycles and exactly one path between any two nodes. Traversals include **preorder, inorder, postorder** and **level order**. Trees are ideal for hierarchical data like file systems, organizational charts, or decision processes.  
+   - **Graphs** are more general: they can have cycles, multiple paths and can be directed/undirected, weighted/unweighted. Traversals include **BFS** and **DFS**. Graphs naturally model road networks, social networks, power grids and communication networks.
+
+7. **Deliberate on sorting and searching algorithms, the technique behind each and how they connect to the real world.**  
+
+   Sorting algorithms:
+   - **Bubble / Selection / Insertion sort** – simple, often O(n²), good only for small inputs or partially sorted data.  
+   - **Merge sort / Quick sort / Heap sort** – use divide-and-conquer or heap principles to reach O(n log n).  
+
+   Searching:
+   - **Linear search** – checks one by one, useful when data isn’t sorted.  
+   - **Binary search** – repeatedly halves the search space in sorted data, giving O(log n) time.  
+
+   In real systems, these ideas appear in: ranking search results, ordering patients by priority, filtering rides or deliveries, and quickly finding records from databases.
+
+8. **Discuss the importance of graph algorithms with respect to spanning trees and shortest paths.**  
+
+   **Spanning tree algorithms** (Prim’s, Kruskal’s) help us build networks with minimum total cost, which is vital for laying out roads, pipelines or cables.  
+   **Shortest path algorithms** (Dijkstra, Bellman-Ford, Floyd-Warshall) find optimal routes under different conditions, which directly applies to **navigation, logistics and emergency routing**. Together, they reduce cost, improve response time and make infrastructure planning more efficient.
+
+9. **Discuss the different studied algorithm design techniques.**  
+
+   We explored multiple design techniques:
+   - **Brute force** – try all possibilities, simple but often slow.  
+   - **Backtracking** – systematically explore possibilities but discard partial solutions that can’t work.  
+   - **Decrease-and-conquer** – reduce the problem size step by step (e.g., graph traversals).  
+   - **Divide-and-conquer** – split into subproblems, solve independently and combine (sorting, many tree and graph algorithms).  
+   - **Greedy** – make the best local choice at each step (Dijkstra, Prim, Kruskal).  
+   - **Transform-and-conquer** – change data representation (using heaps, balanced trees).  
+
+   These techniques give us a toolkit to attack new problems in a structured way.
+
+---
+
+## Breakdown Of Business Ideas
+
+## Smart Emergency Response & Dynamic Routing System
+
+- A city experiences different types of emergencies: road accidents, heart attacks, fire outbreaks and crimes. Response time decides whether a situation stays under control or becomes fatal.  
+- We model the **city as a weighted graph** where:
+  - Nodes = junctions, hospitals, fire stations, police stations.  
+  - Edges = roads, with weights representing travel time influenced by traffic, road quality or signals.  
+- When an emergency request comes in:
+  - The system identifies the **nearest suitable vehicle** (ambulance, fire truck, police car).  
+  - Runs a **shortest path algorithm** considering current road conditions.  
+  - Sends the route instructions to the vehicle and logs the response time.  
+- Over time, the system analyses data to:
+  - Detect **high-risk zones** (frequent accidents or emergencies).  
+  - Suggest where to position new hospitals or stations.  
+  - Improve traffic planning to keep critical routes less congested.
+
+To implement this, we use different algorithms and data structures from the course:
+
+- Use **arrays and structures** to store details of junctions, roads, hospitals and vehicles.  
+- Use **adjacency lists** (implemented via linked lists) to store the city graph efficiently.  
+- Use **BFS/DFS** to explore the graph, check connectivity and discover all areas reachable from a station.  
+- Use **Dijkstra’s algorithm with a min-heap** (priority queue) to compute shortest travel time routes.  
+- Use **hash tables** to quickly map names (area, junction, hospital) to node IDs.  
+- Use **queues** to handle incoming emergency requests in a fair order.  
+- Optionally, use **segment trees or Fenwick trees** over time-series data of calls to answer queries like:
+  - “How many emergencies in this zone this month?”  
+  - “What is the minimum response time in the last 7 days?”  
+
+### Algorithms/Data-structures Used:
+
+#### Arrays and Structures
+
+We use arrays of structures to store all nodes and edges.
+
+Efficiency:
+
+- Access by index: **O(1)**  
+- Insertion at end (amortized): **O(1)**  
+- Deletion in middle: **O(n)**  
+
+Sample Code: `Sample Code for Array and Struct (to be linked from GitHub)`
+
+---
+
+#### Graph Representation using Adjacency List (Linked List)
+
+We represent the road network as a graph with an adjacency list.
+
+Efficiency:
+
+- Space: **O(V + E)**  
+- Iterating over neighbours of a node: **O(degree(node))**
+
+Sample Code: `Sample Code for Graph (Adjacency List)`
+
+---
+
+#### Breadth First Search (BFS)
+
+BFS is used to check reachability and to find unweighted shortest paths (for equal travel times).
+
+Efficiency:
+
+- Time: **O(V + E)**  
+- Space: **O(V)**  
+
+Sample Code: `Sample Code for BFS`
+
+---
+
+#### Depth First Search (DFS)
+
+DFS is used to check connectivity, detect isolated zones and perform analyses on the graph.
+
+Efficiency:
+
+- Time: **O(V + E)**  
+- Space: **O(V)** (due to recursion/stack)
+
+Sample Code: `Sample Code for DFS`
+
+---
+
+#### Dijkstra’s Algorithm (with Min-Heap Priority Queue)
+
+Dijkstra is the **core algorithm** to find the fastest route for ambulances or fire trucks.
+
+Efficiency:
+
+- Using adjacency list + min-heap:  
+  - Time: **O((V + E) log V)**  
+  - Space: **O(V + E)**  
+
+Sample Code: `Sample Code for Dijkstra`
+
+---
+
+#### Min-Heap (Priority Queue)
+
+The min-heap stores nodes ordered by current best-known distance in Dijkstra.
+
+Efficiency:
+
+- Insertion: **O(log n)**  
+- Extract-Min: **O(log n)**  
+- Decrease-Key (if implemented): **O(log n)**  
+
+Sample Code: `Sample Code for Min-Heap`
+
+---
+
+#### Queue Data Structure
+
+Queues are used:
+
+- For BFS traversal.  
+- To manage emergency requests in **first-come, first-served** order (unless overridden by priority).
+
+Efficiency:
+
+- Enqueue: **O(1)**  
+- Dequeue: **O(1)**  
+- Peek: **O(1)**  
+
+Sample Code: `Sample Code for Queue`
+
+---
+
+#### Hash Table (Hashing)
+
+Hash tables map names like `"City Hospital"` or `"East Junction"` to node IDs for quick lookup.
+
+Efficiency:
+
+- Average time for search, insert, delete: **O(1)**  
+- Worst case: **O(n)** (if many collisions)
+
+Sample Code: `Sample Code for Hash Table`
+
+---
+
+#### Segment Tree / Fenwick Tree (for Analytics) – Optional but Powerful
+
+We can store counts of emergencies per time or per region in a segment tree or Fenwick tree to answer range queries.
+
+Efficiency (Segment Tree):
+
+- Build: **O(n)**  
+- Update: **O(log n)**  
+- Query: **O(log n)**  
+
+Efficiency (Fenwick Tree):
+
+- Update: **O(log n)**  
+- Prefix sum: **O(log n)**  
+
+Sample Code: `Sample Code for Segment Tree / Fenwick Tree`
+
+---
+
+By combining all these structures and algorithms, our **Smart Emergency Response System** shows how concepts from the Algorithms course can be applied to build a **real, impactful application** for a modern city.
