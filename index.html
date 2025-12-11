@@ -1,137 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Navapura – Smart City</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: "Poppins", sans-serif;
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
-            min-height: 100vh;
-        }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project VanaSparsha — Smart City</title>
 
-        /* Navigation Bar */
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 
-        .navbar a {
-            margin: 0 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 18px;
-            color: white;
-            transition: 0.3s;
-        }
-
-        .navbar a:hover {
-            color: #002b5b;
-            transform: scale(1.1);
-        }
-
-        /* Main Card */
-        .card {
-            background: rgba(255, 255, 255, 0.85);
-            width: 80%;
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 40px;
-            border-radius: 18px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-            animation: fadeIn 1.2s ease-in-out;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 40px;
-            color: #1c1c1c;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 22px;
-            color: #333;
-            margin-top: 0;
-        }
-
-        .section {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            margin-top: 25px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-            font-size: 18px;
-        }
-
-        ul li {
-            margin: 12px 0;
-        }
-
-        ul li a {
-            text-decoration: none;
-            font-weight: 600;
-            color: #0077ff;
-            transition: 0.2s;
-        }
-
-        ul li a:hover {
-            color: #003f88;
-            margin-left: 5px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(25px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="akmal.html">Akmal</a>
-        <a href="annapurna.html">Annapurna</a>
-        <a href="amruta.html">Amruta</a>
-    </div>
+<!-- Animated Particle Background -->
+<canvas id="bg"></canvas>
 
-    <!-- Main Card -->
-    <div class="card">
-        <h1>Indraprastha – Smart City Project</h1>
-        <h2>Algorithms Lab | KLE Technological University</h2>
+<!-- NAVIGATION -->
+<header>
+    <div class="logo">VanaSparsha</div>
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#hologram">3D City</a>
+        <a href="#stats">Live Data</a>
+    </nav>
+</header>
 
-        <div class="section">
-            <h3>👥 Team Members</h3>
-            <ul>
-                <li><a href="akmal.html">Akmal B</a></li>
-                <li><a href="annapurna.html">Annapurna</a></li>
-                <li><a href="amruta.html">Amruta</a></li>
-            </ul>
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1>Project VanaSparsha</h1>
+    <h2>Smart City Infrastructure</h2>
+    <p>A futuristic city model powered by intelligence, sustainability, and connected systems.</p>
+    <button class="cta-btn" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+        Explore ↓
+    </button>
+</section>
+
+<!-- HOLOGRAM CITY -->
+<section id="hologram" class="city-section">
+    <h2 class="section-title">Neon Hologram City</h2>
+    <p>A procedurally generated holographic city with neon lights and depth animation.</p>
+    <canvas id="city"></canvas>
+</section>
+
+<!-- FEATURE CARDS -->
+<section id="features" class="cards-section">
+    <h2 class="section-title">Smart City Features</h2>
+
+    <div class="card-grid">
+
+        <div class="card glass" data-tilt data-tilt-max="15">
+            <h3>⚡ Smart Power Grid</h3>
+            <p>Adaptive loads, renewable routing, and AI-balanced distribution.</p>
         </div>
 
-        <div class="section">
-            <h3>📌 Project Topic</h3>
-            <p style="font-size: 20px; font-weight: bold; text-align: center;">
-                Smart Emergency Response & Dynamic Routing System for Our City
-            </p>
+        <div class="card glass" data-tilt data-tilt-max="15">
+            <h3>🚇 Autonomous Transit</h3>
+            <p>Real-time optimized route mapping and congestion control.</p>
+        </div>
+
+        <div class="card glass" data-tilt data-tilt-max="15">
+            <h3>🌳 Green Corridors</h3>
+            <p>Sustainability-focused zoning with biodiversity integration.</p>
+        </div>
+
+        <div class="card glass" data-tilt data-tilt-max="15">
+            <h3>🛰️ IoT Mesh Layer</h3>
+            <p>Hyper-dense sensor network for monitoring and automation.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- LIVE STATS -->
+<section id="stats" class="stats-section glass">
+    <h2 class="section-title">Live City Status</h2>
+
+    <div class="stats-grid">
+        <div class="stat">
+            <label>Traffic Load</label>
+            <div id="traffic" class="value">0%</div>
+        </div>
+
+        <div class="stat">
+            <label>Grid Frequency</label>
+            <div id="grid" class="value">0 Hz</div>
+        </div>
+
+        <div class="stat">
+            <label>Ambulances Active</label>
+            <div id="health" class="value">0</div>
         </div>
     </div>
+</section>
 
+<footer>
+    © 2025 Project VanaSparsha — A Futuristic Smart-City Interface
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
